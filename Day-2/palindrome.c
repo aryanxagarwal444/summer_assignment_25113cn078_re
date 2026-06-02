@@ -3,11 +3,15 @@ int main(){
     int n, r;
     printf("enter a number: ");
     scanf("%d",&n);
-    int c=1;
+    int c=0;
+    int num=n;
     while(n>0){
         r = n%10;
-        c*=r;
+        c = c*10 + r;
         n/=10;
     }
-    printf("The product of digits are %d",c);
+    if(num==c)
+    printf("Palindrome");
+    else
+    printf("Not palindrome");
 }
