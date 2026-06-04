@@ -9,6 +9,10 @@ int main(int argc, char const *argv[])
     cin>>e;
     bool isprime;
     for(int j=s; j<=e; j++){
+        if(j<1){
+        cout<<"Invalid "<<endl;
+        continue;
+    }
         i=2;
         isprime=true;
         while(isprime && i<j){
@@ -18,5 +22,7 @@ int main(int argc, char const *argv[])
         }    
         if(isprime)
         cout<<j<<" "; 
+        cout<<endl;
     }
+    
 }
