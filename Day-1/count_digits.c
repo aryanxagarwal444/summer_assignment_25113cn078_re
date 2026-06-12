@@ -1,12 +1,33 @@
 #include<stdio.h>
-int main(){
-    int n;
-    printf("enter a number: ");
-    scanf("%d",&n);
-    int c=0;
-    while(n>0){
-        n/=10;
-        ++c;
+int main()
+{
+    int n, sum, r;
+
+    printf("Enter the number: ");
+    scanf("%d", &n);
+
+     while (n != 1 && n != 4)// 4 is used as it is smallest unhappy number.
+    {
+        sum = 0;
+
+        while (n != 0)
+        {
+            r = n % 10;
+            sum = sum + r * r;
+            n = n / 10;
+        }
+
+        n = sum;
     }
-    printf("The number of digits are %d",c);
+
+    if (n == 1)
+    {
+        printf("Happy Number");
+    }
+    else
+    {
+        printf("not a Happy Number");
+    }
+
+    return 0;
 }
