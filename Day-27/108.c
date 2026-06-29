@@ -71,7 +71,8 @@ int main()
             printf("\nMaths Marks: %.2f\n",s[i].Maths_marks);
 
 
-            found = 1;
+            found = 1;1
+            
             break;
         }
     }
